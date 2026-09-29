@@ -28,16 +28,21 @@ function FlipCardGame() {
     if (flippedIndexes.length !== 2) return
 
     const [first, second] = flippedIndexes
+    const firstValue = shuffledNumbers[first]
+    const secondValue = shuffledNumbers[second]
 
-    if (shuffledNumbers[first] === shuffledNumbers[second]) {
+    const isPair = firstValue === secondValue
+    const isTheOnePair = isPair && firstValue === WINNING_VALUE
+
+    if (isTheOnePair) {
       setMatchedIndexes(prev => [...prev, first, second])
       setFlippedIndexes([])
-
-      if (shuffledNumbers[first] === 1) setHasWon(true)
+      setHasWon(true)
       return
     }
 
-    const timerId = setTimeout(() => setFlippedIndexes([]), FLIP_BACK_DELAY)
+    const delay = isPair ? DECOY_MATCH_DELAY : FLIP_BACK_DELAY
+    const timerId = setTimeout(() => setFlippedIndexes([]), delay)
 
     return () => clearTimeout(timerId)
   }, [flippedIndexes, shuffledNumbers])
