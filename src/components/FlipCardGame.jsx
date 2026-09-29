@@ -3,6 +3,8 @@ import FlipCard from './FlipCard.jsx'
 
 const CARD_NUMBERS = [1,1,2,2,3,3,4,4,5,5]
 const FLIP_BACK_DELAY = 700
+const DECOY_MATCH_DELAY = 400
+const WINNING_VALUE = 1
 
 function shuffle(array) {
   const shuffled = [...array]
