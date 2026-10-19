@@ -8,29 +8,29 @@ function Calculator() {
         </div>
 
         <div className="grid grid-cols-4 gap-3">
-          <button className="rounded-lg bg-[#4a4a4a] text-white text-xl py-4">C</button>
-          <button className="rounded-lg bg-[#4a4a4a] text-white text-xl py-4">%</button>
-          <button className="rounded-lg bg-[#4a4a4a] text-white text-xl py-4">DEL</button>
-          <button className="rounded-lg bg-[#0000CD] text-white text-xl py-4">÷</button>
+          <button className="rounded-2xl bg-[#C8C2BA] text-[#1a1a1a] text-xl py-4 font-medium">C</button>
+          <button className="rounded-2xl bg-[#C8C2BA] text-[#1a1a1a] text-xl py-4 font-medium">%</button>
+          <button className="rounded-2xl bg-[#C8C2BA] text-[#1a1a1a] text-xl py-4 font-medium">DEL</button>
+          <button className="rounded-2xl bg-[#E8654A] text-white text-xl py-4 font-medium">÷</button>
 
-          <button className="rounded-lg bg-[#3a3a3a] text-white text-xl py-4">7</button>
-          <button className="rounded-lg bg-[#3a3a3a] text-white text-xl py-4">8</button>
-          <button className="rounded-lg bg-[#3a3a3a] text-white text-xl py-4">9</button>
-          <button className="rounded-lg bg-[#0000CD] text-white text-xl py-4">×</button>
+          <button className="rounded-2xl bg-[#D9D3CB] text-[#1a1a1a] text-xl py-4 font-medium">7</button>
+          <button className="rounded-2xl bg-[#D9D3CB] text-[#1a1a1a] text-xl py-4 font-medium">8</button>
+          <button className="rounded-2xl bg-[#D9D3CB] text-[#1a1a1a] text-xl py-4 font-medium">9</button>
+          <button className="rounded-2xl bg-[#E8654A] text-white text-xl py-4 font-medium">×</button>
 
-          <button className="rounded-lg bg-[#3a3a3a] text-white text-xl py-4">4</button>
-          <button className="rounded-lg bg-[#3a3a3a] text-white text-xl py-4">5</button>
-          <button className="rounded-lg bg-[#3a3a3a] text-white text-xl py-4">6</button>
-          <button className="rounded-lg bg-[#0000CD] text-white text-xl py-4">−</button>
+          <button className="rounded-2xl bg-[#D9D3CB] text-[#1a1a1a] text-xl py-4 font-medium">4</button>
+          <button className="rounded-2xl bg-[#D9D3CB] text-[#1a1a1a] text-xl py-4 font-medium">5</button>
+          <button className="rounded-2xl bg-[#D9D3CB] text-[#1a1a1a] text-xl py-4 font-medium">6</button>
+          <button className="rounded-2xl bg-[#E8654A] text-white text-xl py-4 font-medium">−</button>
 
-          <button className="rounded-lg bg-[#3a3a3a] text-white text-xl py-4">1</button>
-          <button className="rounded-lg bg-[#3a3a3a] text-white text-xl py-4">2</button>
-          <button className="rounded-lg bg-[#3a3a3a] text-white text-xl py-4">3</button>
-          <button className="rounded-lg bg-[#0000CD] text-white text-xl py-4">+</button>
+          <button className="rounded-2xl bg-[#D9D3CB] text-[#1a1a1a] text-xl py-4 font-medium">1</button>
+          <button className="rounded-2xl bg-[#D9D3CB] text-[#1a1a1a] text-xl py-4 font-medium">2</button>
+          <button className="rounded-2xl bg-[#D9D3CB] text-[#1a1a1a] text-xl py-4 font-medium">3</button>
+          <button className="rounded-2xl bg-[#E8654A] text-white text-xl py-4 font-medium">+</button>
 
-          <button className="col-span-2 rounded-lg bg-[#3a3a3a] text-white text-xl py-4">0</button>
-          <button className="rounded-lg bg-[#3a3a3a] text-white text-xl py-4">.</button>
-          <button className="rounded-lg bg-[#ADD8E6] text-black text-xl py-4">=</button>
+          <button className="col-span-2 rounded-2xl bg-[#D9D3CB] text-[#1a1a1a] text-xl py-4 font-medium">0</button>
+          <button className="rounded-2xl bg-[#D9D3CB] text-[#1a1a1a] text-xl py-4 font-medium">.</button>
+          <button className="rounded-2xl bg-[#5B8DEF] text-white text-xl py-4 font-medium">=</button>
         </div>
 
       </div>
