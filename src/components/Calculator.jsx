@@ -1,7 +1,7 @@
 function Calculator() {
   return (
-    <div className="flex min-h-screen justify-center items-center bg-[#8B8589]">
-      <div className="flex flex-col gap-4 rounded-2xl bg-[#2B2B2B] p-6 w-80">
+    <div className="flex min-h-screen justify-center items-center bg-[#E8E4DF]">
+      <div className="flex flex-col gap-4 rounded-[2rem] bg-[#F2EDE6] p-6 w-80 shadow-2xl">
         
         <div className="flex items-end justify-end rounded-lg bg-[#1a1a1a] h-24 px-4">
           <p className="text-white text-4xl">0</p>
