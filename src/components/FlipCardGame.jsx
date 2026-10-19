@@ -15,7 +15,7 @@ function shuffle(array) {
   return shuffled
 }
 
-function FlipCardGame() {
+function FlipCardGame({ onWin }) {
   const [shuffledNumbers, setShuffledNumbers] = useState(() => shuffle(CARD_NUMBERS))
   const [flippedIndexes, setFlippedIndexes] = useState([])
   const [matchedIndexes, setMatchedIndexes] = useState([])
@@ -54,6 +54,7 @@ function FlipCardGame() {
     setFlippedIndexes([])
     setMatchedIndexes([])
     setHasWon(false)
+    onWin()
   }
 
   return (
