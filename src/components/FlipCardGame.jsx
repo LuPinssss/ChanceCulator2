@@ -57,7 +57,7 @@ function FlipCardGame() {
   }
 
   return (
-    <div className="relative flex min-h-screen justify-center items-center bg-[#8B8589]">
+    <div className="relative flex min-h-screen justify-center items-center bg-[#15151f]">
       <div className="grid grid-cols-5 gap-5">
         {shuffledNumbers.map((num, index) => (
           <FlipCard
@@ -70,11 +70,11 @@ function FlipCardGame() {
       </div>
 
       {hasWon && (
-        <div className="absolute inset-0 flex justify-center items-center bg-black/50">
-          <div className="flex flex-col items-center gap-4 rounded-lg bg-white p-8">
-            <p className="text-2xl font-bold">You found the 1s!</p>
+        <div className="absolute inset-0 flex justify-center items-center bg-black/70">
+          <div className="flex flex-col items-center gap-4 rounded-2xl bg-[#F2EDE6] p-8 shadow-2xl">
+            <p className="text-2xl font-bold text-[#1a1a1a]">You found the 1s!</p>
             <button
-              className="cursor-pointer rounded-lg bg-[#0000CD] px-6 py-2 text-white"
+              className="cursor-pointer rounded-xl bg-[#E8654A] px-6 py-2 text-white font-medium hover:bg-[#d4573e] transition"
               onClick={handleContinue}
             >
               Continue
