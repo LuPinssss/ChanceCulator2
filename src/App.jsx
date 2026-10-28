@@ -1,26 +1,49 @@
 import { useState } from 'react'
 import Calculator from './components/Calculator.jsx'
 import FlipCardGame from './components/FlipCardGame.jsx'
+import ScratchCardGame from './components/ScratchCardGame.jsx'
 
 function App() {
-  // const [screen, setScreen] = useState("calculator")
-  // const [display, setDisplay] = useState("0")
+  const [screen, setScreen] = useState("calculator")
+  const [display, setDisplay] = useState("0")
 
-  // function handleNumberOneClick() {
-  //   setScreen("flipcard")
-  // }
+  function appendDigit(digit) {
+    setDisplay(prev => (prev === "0" ? digit : prev + digit))
+  }
 
-  // function handleWin() {
-  //   setDisplay(prev => (prev === "0" ? "1" : prev + "1"))
-  //   setScreen("calculator")
-  // }
+  function handleNumberOneClick() {
+    setScreen("flipcard")
+  }
 
-  // return screen === "calculator" ? (
-  //   <Calculator display={display} onNumberOneClick={handleNumberOneClick} />
-  // ) : (
-  //   <FlipCardGame onWin={handleWin} />
-  // )
-  return <ScratchCardGame onWin={() => console.log("WON!")} />
+  function handleNumberTwoClick() {
+    setScreen("scratchcard")
+  }
+
+  function handleFlipCardWin() {
+    appendDigit("1")
+    setScreen("calculator")
+  }
+
+  function handleScratchCardWin() {
+    appendDigit("2")
+    setScreen("calculator")
+  }
+
+  if (screen === "flipcard") {
+    return <FlipCardGame onWin={handleFlipCardWin} />
+  }
+
+  if (screen === "scratchcard") {
+    return <ScratchCardGame onWin={handleScratchCardWin} />
+  }
+
+  return (
+    <Calculator
+      display={display}
+      onNumberOneClick={handleNumberOneClick}
+      onNumberTwoClick={handleNumberTwoClick}
+    />
+  )
 }
 
 export default App

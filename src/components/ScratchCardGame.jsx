@@ -23,10 +23,11 @@ function buildCardValues() {
 function ScratchCardGame({ onWin }) {
   const [cardValues] = useState(() => shuffle(buildCardValues()))
   const [wrongValue, setWrongValue] = useState(null)
+  const [hasWon, setHasWon] = useState(false)
 
   function handleReveal(value) {
     if (value === WINNING_VALUE) {
-      onWin()
+      setHasWon(true)
     } else {
       setWrongValue(value)
     }
@@ -34,6 +35,10 @@ function ScratchCardGame({ onWin }) {
 
   function handleTryAgain() {
     setWrongValue(null)
+  }
+
+  function handleContinue() {
+    onWin()
   }
 
   return (
@@ -53,6 +58,20 @@ function ScratchCardGame({ onWin }) {
               onClick={handleTryAgain}
             >
               Try Again
+            </button>
+          </div>
+        </div>
+      )}
+
+      {hasWon && (
+        <div className="absolute inset-0 flex justify-center items-center bg-black/70">
+          <div className="flex flex-col items-center gap-4 rounded-2xl bg-[#F2EDE6] p-8 shadow-2xl">
+            <p className="text-2xl font-bold text-[#1a1a1a]">You found the {WINNING_VALUE}!</p>
+            <button
+              className="cursor-pointer rounded-xl bg-[#5B8DEF] px-6 py-2 text-white font-medium hover:bg-[#4a7cdb] transition"
+              onClick={handleContinue}
+            >
+              Continue
             </button>
           </div>
         </div>
