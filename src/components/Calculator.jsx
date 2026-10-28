@@ -1,4 +1,4 @@
-function Calculator({ display, onNumberOneClick }) {
+function Calculator({ display, onNumberOneClick, onNumberTwoClick }) {
 
   return (
     <div className="flex min-h-screen justify-center items-center bg-[#E8E4DF]">
@@ -25,7 +25,8 @@ function Calculator({ display, onNumberOneClick }) {
           <button className="rounded-2xl bg-[#E8654A] text-white text-xl py-4 font-medium">−</button>
 
           <button onClick={onNumberOneClick} className="rounded-2xl bg-[#D9D3CB] text-[#1a1a1a] text-xl py-4 font-medium">1</button>
-          <button onClick={onNumberTwoClick} className="rounded-2xl bg-[#D9D3CB] text-[#1a1a1a] text-xl py-4 font-medium">2</button>          <button className="rounded-2xl bg-[#D9D3CB] text-[#1a1a1a] text-xl py-4 font-medium">3</button>
+          <button onClick={onNumberTwoClick} className="rounded-2xl bg-[#D9D3CB] text-[#1a1a1a] text-xl py-4 font-medium">2</button>  
+          <button className="rounded-2xl bg-[#D9D3CB] text-[#1a1a1a] text-xl py-4 font-medium">3</button>
           <button className="rounded-2xl bg-[#E8654A] text-white text-xl py-4 font-medium">+</button>
 
           <button className="col-span-2 rounded-2xl bg-[#D9D3CB] text-[#1a1a1a] text-xl py-4 font-medium">0</button>
