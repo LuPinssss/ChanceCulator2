@@ -2,6 +2,7 @@ import { useState } from 'react'
 import Calculator from './components/Calculator.jsx'
 import FlipCardGame from './components/FlipCardGame.jsx'
 import ScratchCardGame from './components/ScratchCardGame.jsx'
+import SlotMachine from './components/SlotMachine.jsx'
 
 function App() {
   const [screen, setScreen] = useState("calculator")
@@ -38,11 +39,12 @@ function App() {
   }
 
   return (
-    <Calculator
-      display={display}
-      onNumberOneClick={handleNumberOneClick}
-      onNumberTwoClick={handleNumberTwoClick}
-    />
+    // <Calculator
+    //   display={display}
+    //   onNumberOneClick={handleNumberOneClick}
+    //   onNumberTwoClick={handleNumberTwoClick}
+    // />
+    <SlotMachine></SlotMachine>
   )
 }
 
